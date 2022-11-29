@@ -24,31 +24,30 @@ function App() {
     },
   ];
   return (
-    <div>
-      <h2>Expense items</h2>
+    <card classname='expenses'>
       <ExpenseItem>
         title={expenses[0].title}
-        amount={expense[0].amount}
-        date={expense[0].date}
+        amount={expenses[0].amount}
+        date={expenses[0].date}
       </ExpenseItem>
       <ExpenseItem>
       title={expenses[1].title}
-        amount={expense[1].amount}
-        date={expense[1].date}
+        amount={expenses[1].amount}
+        date={expenses[1].date}
       </ExpenseItem>
       <ExpenseItem>
       title={expenses[2].title}
-        amount={expense[2].amount}
-        date={expense[2].date}
+        amount={expenses[2].amount}
+        date={expenses[2].date}
       </ExpenseItem>
       <ExpenseItem>
       title={expenses[3].title}
-        amount={expense[3].amount}
-        date={expense[3].date}
+        amount={expenses[3].amount}
+        date={expenses[3].date}
       </ExpenseItem>
 
      
-    </div>
+    </card>
   );
 }
 
