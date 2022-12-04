@@ -1,12 +1,15 @@
+import React,{ usestate} from 'react';
 import './ExpenseItem.css';
 import './ExpenseDate.js';
 import './card.js';
 function ExpenseItem(props)
 {
-    function ClickHandler()
-    {
-        console.log("clicked!");
-    }
+   const[title,setTitle]=usestate(props.title);
+   const ClickHandler=()=>
+   {
+    setTitle('updated');
+    console.log('title');
+   }
     
     return(
             <card className='expense-item'>
