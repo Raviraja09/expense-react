@@ -1,7 +1,7 @@
 import React,{ usestate} from 'react';
 import './ExpenseItem.css';
 import './ExpenseDate.js';
-import './card.js';
+import './Card.js';
 function ExpenseItem(props)
 {
    const[title,setTitle]=usestate(props.title);
