@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NewExpense from './components/NewExpense';
 import ExpenseItem from './components/ExpenseItem';
 
@@ -24,9 +24,19 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+  const app=()=>
+  {
+    const [expenses,setexpenses]=useState(DUMMY_EXPENSES);
+  }
+  const addexpensehandler=expense=>{
+    setexpenses=(prevExpenses)=>{
+       return[expense,...prevExpenses];
+    }
+    
+  }
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense> addExpense={addexpensehandler}</NewExpense>
       <expenses items={expenses}></expenses>
     </div>
   )
